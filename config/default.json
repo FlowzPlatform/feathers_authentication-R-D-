@@ -1,6 +1,6 @@
 {
   "host": "localhost",
-  "port": 3030,
+  "port": "3030",
   "public": "../public/",
   "paginate": {
     "default": 10,
@@ -33,15 +33,15 @@
     "google": {
       "clientID": "381524561267-3agj2flmlj546qsnufj8d6283e6eismb.apps.googleusercontent.com",
       "clientSecret": "KFzqxuDKfGnF91QMRHiirZwW",
-      "successRedirect": "/",
+      "successRedirect":"SUCCESS_URL",
       "scope": [
-        "profile openid email"
+        "https://www.googleapis.com/auth/userinfo.profile","https://www.googleapis.com/auth/userinfo.email"
       ]
     },
     "facebook": {
       "clientID": "108453269863272",
       "clientSecret": "1d904884cf8bcbfba22d7fb1a699d270",
-      "successRedirect": "/",
+      "successRedirect":"SUCCESS_URL", 
       "scope": [
         "public_profile",
         "email"
@@ -62,7 +62,7 @@
     "github": {
       "clientID": "f728ca2afcccd0d830f3",
       "clientSecret": "1e490ea623e3090b4489b90d7d683da17c0d1c58",
-      "successRedirect": "/"
+      "successRedirect":"SUCCESS_URL"
     },
     "cookie": {
       "enabled": true,

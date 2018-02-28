@@ -1,0 +1,6 @@
+{
+    "port":"PORT",
+    "host":"HOST",
+    "domainkey": "DOMAINKEY",
+    "successRedirect": "SUCCESS_URL"
+  }

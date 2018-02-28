@@ -18,7 +18,21 @@ module.exports = function () {
   // Get our initialized service so that we can register hooks and filters
   const service = app.service('users');
 
-  service.hooks(hooks);
+  function processGoogleProfile(hook) {
+    console.log("hook",hook)
+  // As an example extract the user email
+  // if (hook.data.google) {
+  //   hook.data.email = hook.data.github.profile.emails[0].value
+  // }
+  return Promise.resolve(hook)
+}
+
+  service.hooks({
+     before: {
+       create: [processGoogleProfile],
+       update: [processGoogleProfile]
+  }
+  });
 
   if (service.filter) {
     service.filter(filters);
